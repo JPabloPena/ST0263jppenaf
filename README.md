@@ -19,18 +19,18 @@ No se requieren instalaciones adicionales para que la aplicación funcione.
 Para instalar la aplicación:
 Clonar el repositorio. Para hacerlo si debe instalar git en su máquina Linux de esta manera:
 ```
-    $ sudo yum install git
+$ sudo yum install git
 ```
 Ya para clonarlo debe usar:
 ```
-    $ git clone https://github.com/JPabloPena/ST0263jppenaf.git
+$ git clone https://github.com/JPabloPena/ST0263jppenaf.git
 ```    
 # Ejecución
 Para ejecutar el servidor debe:
 ```
-    $ python3 servidor.py
+$ python3 servidor.py
 ```
 Para ejecutar el cliente debe:
 ```
-    $ python3 cliente.py
+$ python3 cliente.py
 ```
