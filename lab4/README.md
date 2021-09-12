@@ -9,6 +9,7 @@ App2-colas: _RabbitMQ, Python, AWS Educate_
 
 # Descripción
 Simulación de un gestor de tareas para procesamiento distribuido.
+
 Se tiene una aplicación _publisher.py_ la cual envía tareas al middleware que las almacena en una cola para después ser tomadas y realizadas por múltiples servidores.
 Se tiene una aplicación _subscriber.py_ la cual recibe y ejecuta las múltiples tareas que se encuentran en la cola del middleware.
 Es posible tener múltiples clientes enviando tareas al middleware y múltiples servidores ejecutandolas. Si un servidor se encuentra ocupado con alguna tarea otro servidor toma la tarea siguiente y la ejecuta. Para este caso, al ser las tareas tan sencillas el primer servidor las ejecuta muy rápidamente por lo cual no necesita de otro, sin embargo, se probó utilizando múltiples servidores y funciona correctamente.
@@ -38,7 +39,8 @@ $ pip3 install pika
 ```
 
 # Ejecución
-Para ejecutar el cliente (_publisher.py_) debe:
+##Cliente (_publisher.py_)
+Para ejecutar el cliente debe:
 ```
 $ python3 publisher.py <ip-server> <port>
 ```
@@ -57,6 +59,7 @@ Después, se le pedirá un usuario y un email en los cuales puede poner lo que d
 ```
  [x] Escriba su nombre de usuario:
  >prueba123
+ 
  [x] Escriba su email:
  >prueba@prueba.com
 ```
