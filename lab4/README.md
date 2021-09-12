@@ -65,7 +65,7 @@ Después, se le pedirá un usuario y un email en los cuales puede poner lo que d
  [x] Escriba su email:
  >prueba@prueba.com
 ```
-Finalmente podrá enviar tareas a la cola escribiendo únicamente un número como se indica en la aplicación.
+Finalmente, podrá enviar tareas a la cola escribiendo únicamente un número como se indica en la aplicación.
 
 ## Servidor (_subscriber.py_)
 Para ejecutar el servidor debe:
