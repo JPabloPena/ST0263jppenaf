@@ -17,7 +17,13 @@ Se tiene una aplicación _subscriber.py_ la cual recibe y ejecuta las múltiples
 Es posible tener múltiples clientes enviando tareas al middleware y múltiples servidores ejecutandolas. Si un servidor se encuentra ocupado con alguna tarea otro servidor toma la tarea siguiente y la ejecuta. Para este caso, al ser las tareas tan sencillas el primer servidor las ejecuta muy rápidamente por lo cual no necesita de otro, sin embargo, se probó utilizando múltiples servidores y funciona correctamente.
 
 # Detalles del diseño
-Se desarrolló una aplicación cliente-servidor la cual usa un middleware llamado _RabbitMQ_. La aplicación fue desarrollada en python y se necesitó usar el módulo _pika_ para conectarse con _RabbitMQ_. Fue desplegada en _AWS Educate_. 
+Se desarrolló una aplicación cliente-servidor la cual usa un middleware llamado _RabbitMQ_. La aplicación fue desarrollada en _python_ y se necesitó usar el módulo _pika_ para conectarse con _RabbitMQ_. Fue desplegada en _AWS Educate_.
+
+1. Se desplegó una instancia EC2 en _AWS Educate_. En el grupo de seguridad, se permitió el ingreso del tráfico al puerto 5672 y 15672 TCP.
+2. Utilizando _docker_ se ejecutó el servidor de _RabbitMQ_.
+3. En _RabbitMQ_ se creo el exchange y la cola, los cuales fueron asociados.
+4. Se creó el cliente (_publisher.py_) el cual inicialmente se conecta con _RabbitMQ_ y luego procede a enviarle las tareas a la cola según lo permite la lógica de la aplicación.
+5. Se creó el servidor (_subscriber.py_) el cual inicialmente se conecta con _RabbitMQ_ y luego procede recibir las tareas que se encuentran en la cola para después ejecutarlas.
 
 # Instalación
 Es necesario tener _python3_.
