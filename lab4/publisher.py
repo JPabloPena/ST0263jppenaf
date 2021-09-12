@@ -23,6 +23,8 @@ def publisher():
     print('\n [x] Escriba su email: ')
     email = input(" >")
 
+    print('\n [x] Las respuestas serán enviadas a su correo...')
+    
     print('\n [x] ¿Qué tarea desea ejecutar? (Escriba únicamente el número)')
     print('      1. Saludar \n      2. Sumar \n      3. Restar \n      4. Multiplicar \n      5. Felicitar \n      6. Salir de la aplicación')
     tarea = input(" >")
