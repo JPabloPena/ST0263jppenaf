@@ -14,7 +14,7 @@ def Main():
         print("Ejemplo: $python3 client.py 34.226.36.159 3000")
     
 
-    mySocket = socket() #Se llama al método sockect
+    mySocket = socket() #Se llama al método socket
     mySocket.connect( (server, int(port)) ) #Se establece una conexión con el servidor mediante el método socket recibiendo un servidor y puerto
     #mySocket.connect( ('localhost', 8000) )
     #mySocket.connect( ('35.153.31.234', 3000) )
