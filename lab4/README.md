@@ -52,7 +52,7 @@ Para ejecutar el cliente debe:
 ```
 $ python3 publisher.py <ip-server> <port>
 ```
-El _ip-server_ y _port_ son del servidor de RabbitMQ. Ejemplo:
+El _ip-server_ y _port_ son del servidor de _RabbitMQ_. Ejemplo:
 ```
 $ python3 publisher.py 34.226.36.159 5672
 ```
@@ -78,7 +78,7 @@ Para ejecutar el servidor debe:
 ```
 $ python3 subscriber.py <ip-server> <port>
 ```
-El _ip-server_ y _port_ son del servidor de RabbitMQ. Ejemplo:
+El _ip-server_ y _port_ son del servidor de _RabbitMQ_. Ejemplo:
 ```
 $ python3 subscriber.py 34.226.36.159 5672
 ```
