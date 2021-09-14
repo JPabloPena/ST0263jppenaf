@@ -16,7 +16,7 @@ Se realizó así de sencilla debido al desconocimiento del protocolo HTTP y su i
 ## Servidor
 Ejecutar:
 ```
-$ python3 server.py
+$ python3 serverHTTP.py
 ```
 
 ## Cliente
