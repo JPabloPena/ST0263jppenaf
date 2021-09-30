@@ -7,6 +7,10 @@ mySocket = socket.socket()
 def client():
     server, port = parameters()
     serverPort = server + ':' + port
+    print('------ Runnning Client Application ------')
+    print(' [x] ¿Qué operación desea realizar? Escriba únicamente el número: ')
+    print('      1. Sumar \n      2. Restar \n      3. Multiplicar \n      4. Dividir \n      5. Salir de la aplicación')
+    
     try:
         while(True):
             operation = input(' >')
@@ -68,8 +72,5 @@ def parameters():
     return server, port
 
 if __name__ == '__main__':
-    print('------ Runnning Client Application ------')
-    print(' [x] ¿Qué operación desea realizar? Escriba únicamente el número: ')
-    print('      1. Sumar \n      2. Restar \n      3. Multiplicar \n      4. Dividir \n      5. Salir de la aplicación')
     client()
     
