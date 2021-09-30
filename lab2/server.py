@@ -88,7 +88,7 @@ def parameters():
 def main():
     try:
         server, port = parameters()
-        server = HTTPServer((server, port), HandlerConection)
+        server = HTTPServer((server, int(port)), HandlerConection)
         print('------ Runnning Server Application ------')
         server.serve_forever()
     except Exception as error:

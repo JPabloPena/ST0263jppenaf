@@ -45,7 +45,7 @@ def client():
             
         if mySocket != "":
             
-            connection = http.client.HTTPConnection(server, port)
+            connection = http.client.HTTPConnection(server, int(port))
             #connection = http.client.HTTPConnection("http://localhost", 8000)
             connection.request("GET", '/')
             response = connection.getresponse()
