@@ -1,0 +1,1 @@
+Colocar imágen del clúster funcionando y referenciar el video de Edwin donde se creó
