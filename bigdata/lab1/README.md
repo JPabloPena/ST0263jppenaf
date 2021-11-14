@@ -41,7 +41,7 @@ Ahora, en _Hue_, puedes verificar que tus datos se copiaron correctamente:
 
 <img src="https://github.com/JPabloPena/ST0263jppenaf/blob/main/bigdata/assets/lab1-04.PNG"/>
 
-Luego, en _Hue_, debes ir a _S3_ y crear un bucket para tus datasets, en mi caso lo nombre _datasetsjppenaf_ y dentro de este bucket debes crear un directorio que se llame _datasets_:
+Luego, en _Hue_, debes ir a _S3_ y crear un bucket para tus datasets, en mi caso lo nombré _datasetsjppenaf_ y dentro de este bucket debes crear un directorio que se llame _datasets_:
 
 <img src="https://github.com/JPabloPena/ST0263jppenaf/blob/main/bigdata/assets/lab1-05.PNG"/>
 
