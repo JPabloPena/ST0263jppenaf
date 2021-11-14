@@ -2,7 +2,7 @@
 Laboratorio 1 - Bigdata
 
 # Autor
-Juan Pablo Peña
+Juan Pablo Peña F.
 
 # Instalación
 Es necesario tener un clúster corriendo en EMR de AWS.
