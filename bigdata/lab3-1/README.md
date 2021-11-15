@@ -16,7 +16,11 @@ Juan Pablo Peña F.
 <img src="https://github.com/JPabloPena/ST0263jppenaf/blob/main/bigdata/assets/lab3-1-04.PNG"/>
 
 ## wordcount en JupyterHub Notebooks EMR con datos en S3 (tanto datos de entrada como de salida) usando un clúster EMR.
-[JupyterHub - S3](https://github.com/)
+__Bucket__: s3://datasetsjppenaf/tmp/
+[JupyterHub - S3](https://github.com/JPabloPena/ST0263jppenaf/blob/main/bigdata/lab3-1/S3.ipynb)
 
 # Parte 2
-[Data Processing](https://github.com/)
+__Bucket__:
+- s3://datasetsjppenaf/datasets/spark/df_csv/
+- s3://datasetsjppenaf/datasets/spark/df_parquet/
+[Data Processing](https://github.com/JPabloPena/ST0263jppenaf/blob/main/bigdata/lab3-1/Data%20Processing.ipynb)
