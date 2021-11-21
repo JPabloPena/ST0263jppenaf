@@ -1,0 +1,27 @@
+-----|| CREAR TABLA ||-----
+CREATE EXTERNAL TABLE `covid1`( `fecha reporte web` string,  `id de caso` bigint,  `fecha de notificación` string,  `código divipola departamento` bigint,  `nombre departamento` string,  `código divipola municipio` bigint,  `nombre municipio` string,  `edad` bigint,  `unidad de medida de edad` bigint,  `sexo` string,  `tipo de contagio` string,  `ubicación del caso` string,  `estado` string,  `código iso del país` bigint,  `nombre del país` string,  `recuperado` string,  `fecha de inicio de síntomas` string,  `fecha de muerte` string,  `fecha de diagnóstico` string,  `fecha de recuperación` string,  `tipo de recuperación` string,  `pertenencia étnica` bigint,  `nombre del grupo étnico` string) ROW FORMAT DELIMITED  FIELDS TERMINATED BY ','  STORED AS TEXTFILE  LOCATION 's3://datasetsjppenaf/datasets/tablecovid/'
+
+-----|| Los 10 departamentos con más casos de covid en Colombia ordenados de mayor a menor ||-----
+SELECT COUNT(`nombre departamento`), `nombre departamento` 
+FROM covid1 GROUP BY `nombre departamento` 
+ORDER BY COUNT(`nombre departamento`) DESC LIMIT 10;
+
+-----|| Las 10 ciudades con más casos de covid en Colombia ordenados de mayor a menor ||-----
+SELECT COUNT(`nombre municipio`), `nombre municipio` 
+FROM covid1 GROUP BY `nombre municipio` 
+ORDER BY COUNT(`nombre municipio`) DESC LIMIT 10;
+
+-----|| Los 10 días con más casos de covid en Colombia ordenados de mayor a menor ||-----
+SELECT COUNT(`fecha de diagnóstico`), `fecha de diagnóstico` 
+FROM covid1 GROUP BY `fecha de diagnóstico` 
+ORDER BY COUNT(`fecha de diagnóstico`) DESC LIMIT 10;
+
+-----|| Distribución de casos por edades de covid en Colombia ||-----
+SELECT COUNT(`edad`), edad
+FROM covid1 GROUP BY edad 
+ORDER BY COUNT(`edad`) DESC LIMIT 10;
+
+-----|| ¿Cuál es la edad promedio de los contagiados por departamento? ||-----
+SELECT AVG(edad), `nombre departamento`
+FROM covid1 GROUP BY `nombre departamento` 
+LIMIT 10;

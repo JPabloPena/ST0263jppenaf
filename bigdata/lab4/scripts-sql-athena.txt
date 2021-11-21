@@ -1,0 +1,26 @@
+SELECT * FROM "AwsDataCatalog"."jppenafdb"."tablecovid" limit 10;
+
+-----|| Los 10 departamentos con más casos de covid en Colombia ordenados de mayor a menor ||-----
+SELECT COUNT('nombre departamento'), "nombre departamento" 
+FROM "AwsDataCatalog"."jppenafdb"."tablecovid" GROUP BY "nombre departamento" 
+ORDER BY COUNT('nombre departamento') DESC LIMIT 10;
+
+-----|| Las 10 ciudades con más casos de covid en Colombia ordenados de mayor a menor ||-----
+SELECT COUNT('nombre municipio'), "nombre municipio" 
+FROM "AwsDataCatalog"."jppenafdb"."tablecovid" GROUP BY "nombre municipio" 
+ORDER BY COUNT('nombre municipio') DESC LIMIT 10;
+
+-----|| Los 10 días con más casos de covid en Colombia ordenados de mayor a menor ||-----
+SELECT COUNT('fecha de diagnóstico'), "fecha de diagnóstico" 
+FROM "AwsDataCatalog"."jppenafdb"."tablecovid" GROUP BY "fecha de diagnóstico" 
+ORDER BY COUNT('fecha de diagnóstico') DESC LIMIT 10;
+
+-----|| Distribución de casos por edades de covid en Colombia ||-----
+SELECT COUNT('edad'), "edad" 
+FROM "AwsDataCatalog"."jppenafdb"."tablecovid" GROUP BY "edad" 
+ORDER BY COUNT('edad') DESC LIMIT 10;
+
+-----|| ¿Cuál es la edad promedio de los contagiados por departamento? ||-----
+SELECT AVG(edad), "nombre departamento"
+FROM "AwsDataCatalog"."jppenafdb"."tablecovid" GROUP BY "nombre departamento" 
+LIMIT 10;
