@@ -1,5 +1,5 @@
 # Título
-Laboratorio 0 - Bigdata
+Laboratorio 3-1 - Bigdata
 
 # Autor
 Juan Pablo Peña F.
