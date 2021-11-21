@@ -1,5 +1,3 @@
-SELECT * FROM "AwsDataCatalog"."jppenafdb"."tablecovid" limit 10;
-
 -----|| Los 10 departamentos con más casos de covid en Colombia ordenados de mayor a menor ||-----
 SELECT COUNT('nombre departamento'), "nombre departamento" 
 FROM "AwsDataCatalog"."jppenafdb"."tablecovid" GROUP BY "nombre departamento" 
